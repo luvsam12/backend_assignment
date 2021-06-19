@@ -4,7 +4,7 @@ const Devices = require("./models/devices")
 const Status = require("./models/status")
 const NodeGeocoder = require('node-geocoder');
 const app = express();
-
+require('dotenv').config();
 //Middleware
 
 app.use(express.json()) //to parse the body form the url endpoint
@@ -76,7 +76,7 @@ app.post("/devices/:name", (req,res) =>{
       
         // Optionnal depending of the providers
         httpAdapter: 'https', 
-        apiKey: 'AIzaSyA5bwbEsAOUMOI4RK2zXcIayG4vjuQSpcw', 
+        apiKey: process.env.SECURITY_KEY, 
         formatter: null
       };
       
