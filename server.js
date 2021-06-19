@@ -1,15 +1,32 @@
 const express = require("express")
-const app  = express();
 const mongoose = require("mongoose")
 const Devices = require("./models/devices")
 const Status = require("./models/status")
 const NodeGeocoder = require('node-geocoder');
+const app = express();
 
-app.use(express.json())
+//Middleware
 
-app.post("/:name", (req,res) =>{
+app.use(express.json()) //to parse the body form the url endpoint
+
+
+// Routes
+
+// @route    POST /devices/:params
+// @desc     Post mongo url, collection in form of params and query and will return 30 devices with 50 location
+// @access   Public
+// to use:   url=> http://localhost:1000/devices/Devices
+//           params=> {/Devices , from the endpoint is used as params}
+//           body=> {url: mongodb url with the db mane to be used}
+//           query=> name: Status
+// response: {[devices + location]}
+
+
+app.post("/devices/:name", (req,res) =>{
     let url = req.body.url;
-    mongoose.connect(url,
+    //Connect to Mongo
+    mongoose
+        .connect( url,
                   { useNewUrlParser: true,
                     useUnifiedTopology: true })
         .then(() => {
@@ -33,23 +50,16 @@ app.post("/:name", (req,res) =>{
                   .then(data => {
                      res.json({success: true, data: data})
                   })
-
-
-
-            // {
-            //     "_id": "5c4592a043ecb6530de638af",
-            //     "id": "C2",
-            //     "imei": "0358739053370541",
-            //     "sim": "26",
-            //     "tel": "5755080017074",
-            //     "createdAt": "2019-01-21T09:36:32.077Z",
-            //     "client": "proconnect"
-            // },
-            
-            
         })
 })
 
+
+// @route    POST /location
+// @desc     Post latitude and longitude wrt address provided in body
+// @access   Public
+// to use:   url=> http://localhost:1000/location
+//           body=> {[array of address (string)]}
+// response: {[add: (address passed in body), location [latitude, longitude]]}
 
  app.post("/location", async (req,res) => {
 
@@ -87,7 +97,7 @@ app.post("/:name", (req,res) =>{
       
 
 })
-// connecting a database
+
 
 
 // creation of a server

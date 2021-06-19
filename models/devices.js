@@ -1,4 +1,7 @@
 const mongoose = require("mongoose")
+
+//create schema
+
 const Devices = mongoose.Schema({
     name: {
         type: String,
