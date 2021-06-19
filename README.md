@@ -34,8 +34,6 @@ For testing any API
          response: hello world
 ```
 
-![alt text](./SnapShots/get_request_test.png)
-
 ```sh
 - Second: template (POST)
          url: https://flipr-backend-assignment.herokuapp.com/devices/Devices
