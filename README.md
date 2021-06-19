@@ -49,6 +49,9 @@ node-geocoder
 # A brief abut the project
 ```sh
 - contains two API
-  - First: /devices/:name => that takes in mongoDB url as a body, collection 1 name as a params, collection 2 name as a query and provide an object or array as a response that contain data of 30 devices with 50 location of each.
-  - Second: /location => that takes an array of address as a ody and provide an array as a response that contains objects having the address provide, location in terms of latitude and longitude.
+  - First: /devices/:name => that takes in mongoDB url as a body, collection 1 name as a params,
+    collection 2 name as a query and provide an object or array as a response that contain data of
+    30 devices with 50 location of each.
+  - Second: /location => that takes an array of address as a ody and provide an array as a response
+    that contains objects having the address provide, location in terms of latitude and longitude.
 ```
