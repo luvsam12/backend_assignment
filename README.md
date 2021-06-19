@@ -32,7 +32,11 @@ For testing any API
          url: https://flipr-backend-assignment.herokuapp.com/
 
          response: hello world
+```
 
+![alt text](./SnapShots/get_request_test.png)
+
+```sh
 - Second: template (POST)
          url: https://flipr-backend-assignment.herokuapp.com/devices/Devices
          body: {
@@ -42,8 +46,11 @@ For testing any API
 
          response: {[id: deviceID, location:[50 location points]]}
 
-         ![alt text](./SnapShots/API_1_response.png)
+```
 
+![alt text](./SnapShots/API_1_response.png)
+
+```sh
 - Third: template (POST)
          url: https://flipr-backend-assignment.herokuapp.com/location
          body: {
