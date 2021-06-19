@@ -21,6 +21,36 @@ npm run server (using nodemon)
 
 Your app should now be running on [localhost:1000](http://localhost:1000/).
 
+
+## Heroku Deployed 
+```sh
+The application is deployed on [Heroku](https://flipr-backend-assignment.herokuapp.com/)
+
+For testing any API
+- First: A test api (GET)
+         url: https://flipr-backend-assignment.herokuapp.com/
+
+         response: hello world
+
+- Second: template (POST)
+         url: https://flipr-backend-assignment.herokuapp.com/devices/Devices
+         body: {
+                    "url": "mongodb+srv://backendconcoxdeveloper:V3jUV7QXqEoAtnhy@cluster0-zhjde.mongodb.net/__CONCOX__?retryWrites=true&w=majority"
+                }
+         query: name: Status
+
+         response: {[id: deviceID, location:[50 location points]]}
+
+- Third: template (POST)
+         url: https://flipr-backend-assignment.herokuapp.com/location
+         body: {
+                    "address": ["Plot No:1, Sadarpur, Sector-45, Noida, Uttar Pradesh 201303, India", "New Link Road, Behind Infinity Mall, Andheri West, Mumbai, Maharashtra 400053, India", "D-002, Sector 75 Road, Sector 75, Noida, Uttar Pradesh 201301, India", "Ambrahi Village, Sector 19 Dwarka, Dwarka, Delhi, 110075, India","PlotNo53,BlockB,Sector56,Gurugram,Haryana122011,India" ]
+                }
+        
+        response: {[add: address provided, location: [latitude, longitude]]}
+
+```
+
 ## Documentation
 
 # folder structure
