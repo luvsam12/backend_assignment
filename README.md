@@ -1,6 +1,6 @@
 ### flipr Backend Assignment
 
-
+---
 [![gitter][gitter-image]][gitter-url]
   [![NPM version][npm-image]][npm-url]
   [![build status][travis-image]][travis-url]
@@ -8,9 +8,6 @@
   [![OpenCollective Backers][backers-image]](#backers)
   [![OpenCollective Sponsors][sponsors-image]](#sponsors)
   [![PR's Welcome][pr-welcoming-image]][pr-welcoming-url]
-
----
-
 # node-js-application
 
 A barebones Node.js app using [Express 4](http://expressjs.com/).
