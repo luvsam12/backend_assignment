@@ -42,7 +42,7 @@ For testing any API
                 }
          query: name: Status
 
-         response: {[id: deviceID, location:[50 location points]]}
+         response: {[id: deviceID, location:[50 location points]]} 
 
 ```
 
