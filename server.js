@@ -24,6 +24,7 @@ app.use(express.json()) //to parse the body form the url endpoint
 
 app.post("/devices/:name", (req,res) =>{
     let url = req.body.url;
+    let final = []
     //Connect to Mongo
     mongoose
         .connect( url,
@@ -33,23 +34,55 @@ app.post("/devices/:name", (req,res) =>{
             console.log("DB connected")
             console.log(req.params.name)
             let d = req.params.name
-            // if(d === 'Devices'){
-            //     Devices.find().then((data) => {
-            //         data = data.splice(1,30)
-            //         // data = data.map(cur => {
-            //         //     Status.findOne({imei: cur.imei})
-            //         //     .then(data => data)
-            //         // })
-            //         res.json({success: true, data: data})
-            //         // res.json({success: true, data: data})
-            //     } 
-            //     )
-            // }
-
-            Status.find()
+            if(d === 'Devices'){
+                Devices.find()
+                .sort({createdAt: +1})
+                .then((data) => {
+                    data = data.splice(1,30)
+                Status.find({tag: "GPS Positioning"})
+                  .sort({createdAt: +1})
                   .then(data => {
-                     res.json({success: true, data: data})
+                      let obj = {
+                          id: data[0].device,
+                          location: []
+                      }
+                      data = data.splice(0,50);
+                      for(var i=0;i<data.length;i++){
+                          obj.location.push(data[i].gps)
+                      }
+                     res.json({success: true, data: obj})
                   })
+                } 
+                )
+            }
+
+            // Status.find({tag: "GPS Positioning"})
+            //       .sort({createdAt: +1})
+            //       .then(data => {
+            //           let obj = {
+            //               id: data[0].device,
+            //               location: []
+            //           }
+            //           data = data.splice(0,50);
+            //           for(var i=0;i<data.length;i++){
+            //               obj.location.push(data[i].gps)
+            //           }
+            //          res.json({success: true, data: obj})
+            //       })
+
+
+
+            // {
+            //     "_id": "5c4592a043ecb6530de638af",
+            //     "id": "C2",
+            //     "imei": "0358739053370541",
+            //     "sim": "26",
+            //     "tel": "5755080017074",
+            //     "createdAt": "2019-01-21T09:36:32.077Z",
+            //     "client": "proconnect"
+            // },
+            
+            
         })
 })
 
