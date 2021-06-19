@@ -23,9 +23,11 @@ Your app should now be running on [localhost:1000](http://localhost:1000/).
 
 
 ## Heroku Deployed 
-```sh
+
 The application is deployed on [Heroku](https://flipr-backend-assignment.herokuapp.com/)
 
+
+```sh
 For testing any API
 - First: A test api (GET)
          url: https://flipr-backend-assignment.herokuapp.com/
@@ -82,7 +84,7 @@ node-geocoder
   - First: /devices/:name => that takes in mongoDB url as a body, collection 1 name as a params,
     collection 2 name as a query and provide an object or array as a response that contain data of
     30 devices with 50 location of each.
-    
+
   - Second: /location => that takes an array of address as a ody and provide an array as a response
     that contains objects having the address provide, location in terms of latitude and longitude.
 ```
