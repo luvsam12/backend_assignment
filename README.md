@@ -33,3 +33,15 @@ Your app should now be running on [localhost:1000](http://localhost:1000/).
   - [package.json]
   - [readme]
   - [server]
+
+
+
+# Packages used
+```sh
+
+express
+nodemon
+mongoose
+node-geocoder
+
+```
