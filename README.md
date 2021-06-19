@@ -51,8 +51,9 @@ For testing any API
                 }
         
         response: {[add: address provided, location: [latitude, longitude]]
-        ![alt text](./SnapShots/API_2_response.png)
 ```
+
+![alt text](./SnapShots/API_2_response.png)
 
 ## Documentation
 
