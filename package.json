@@ -1,0 +1,27 @@
+{
+  "name": "flipr-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luvsam12/flipr-backend.git"
+  },
+  "author": "naman samaiya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luvsam12/flipr-backend/issues"
+  },
+  "homepage": "https://github.com/luvsam12/flipr-backend#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.14",
+    "node-geocoder": "^3.27.0",
+    "nodemon": "^2.0.7"
+  }
+}
