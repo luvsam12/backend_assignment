@@ -55,34 +55,6 @@ app.post("/devices/:name", (req,res) =>{
                 } 
                 )
             }
-
-            // Status.find({tag: "GPS Positioning"})
-            //       .sort({createdAt: +1})
-            //       .then(data => {
-            //           let obj = {
-            //               id: data[0].device,
-            //               location: []
-            //           }
-            //           data = data.splice(0,50);
-            //           for(var i=0;i<data.length;i++){
-            //               obj.location.push(data[i].gps)
-            //           }
-            //          res.json({success: true, data: obj})
-            //       })
-
-
-
-            // {
-            //     "_id": "5c4592a043ecb6530de638af",
-            //     "id": "C2",
-            //     "imei": "0358739053370541",
-            //     "sim": "26",
-            //     "tel": "5755080017074",
-            //     "createdAt": "2019-01-21T09:36:32.077Z",
-            //     "client": "proconnect"
-            // },
-            
-            
         })
 })
 
