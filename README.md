@@ -1,13 +1,6 @@
 ### flipr Backend Assignment
 
 ---
-[![gitter][gitter-image]][gitter-url]
-  [![NPM version][npm-image]][npm-url]
-  [![build status][travis-image]][travis-url]
-  [![Test coverage][coveralls-image]][coveralls-url]
-  [![OpenCollective Backers][backers-image]](#backers)
-  [![OpenCollective Sponsors][sponsors-image]](#sponsors)
-  [![PR's Welcome][pr-welcoming-image]][pr-welcoming-url]
 # node-js-application
 
 A barebones Node.js app using [Express 4](http://expressjs.com/).
@@ -49,14 +42,16 @@ For testing any API
 
          response: {[id: deviceID, location:[50 location points]]}
 
+         ![alt text](./SnapShots/API_1_response.png)
+
 - Third: template (POST)
          url: https://flipr-backend-assignment.herokuapp.com/location
          body: {
                     "address": ["Plot No:1, Sadarpur, Sector-45, Noida, Uttar Pradesh 201303, India", "New Link Road, Behind Infinity Mall, Andheri West, Mumbai, Maharashtra 400053, India", "D-002, Sector 75 Road, Sector 75, Noida, Uttar Pradesh 201301, India", "Ambrahi Village, Sector 19 Dwarka, Dwarka, Delhi, 110075, India","PlotNo53,BlockB,Sector56,Gurugram,Haryana122011,India" ]
                 }
         
-        response: {[add: address provided, location: [latitude, longitude]]}
-
+        response: {[add: address provided, location: [latitude, longitude]]
+        ![alt text](./SnapShots/API_2_response.png)
 ```
 
 ## Documentation
